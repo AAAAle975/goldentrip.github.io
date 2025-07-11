@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #3a4362;
+      text-align: center;
+      color: white;
+    }
+    .formulario {
+      background: #282932;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 20px 0 5px;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      color: rgb(11, 41, 22);
+    }
+    .btn {
+      margin-top: 20px;
+      background-color: #e50914;
+      color: rgb(255, 255, 255);
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .btn-volver {
+      background-color: #444;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="formulario">
+    <h2>Encuesta de Satisfacción</h2>
+    <form action="https://www.youtube.com/watch?v=VkkS3kJAG7g" target="_blank">
+
+      <label>1. ¿Qué tan entretenida te pareció la película?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Muy entretenida</option>
+        <option>Entretenida</option>
+        <option>Regular</option>
+        <option>Aburrida</option>
+      </select>
+
+      <label>2. ¿Cómo calificarías la actuación?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Muy buena</option>
+        <option>Buena</option>
+        <option>Mala</option>
+        <option>Pésima</option>
+      </select>
+
+      <label>3. ¿Te gustó la historia o trama?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+
+      <label>4. ¿Cómo calificarías los efectos visuales?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Buenos</option>
+        <option>Regulares</option>
+        <option>Malos</option>
+      </select>
+
+      <label>5. ¿Recomendarías la película a un amigo?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Sí</option>
+        <option>No</option>
+      </select>
+
+      <label>6. ¿la volverías a ver?</label>
+      <select>
+        <option>Elige una opción</option>
+        <option>Claro que sí</option>
+        <option>Tal vez</option>
+        <option>No</option>
+      </select>
+
+      <label>7. Comentarios adicionales:</label>
+      <textarea rows="4"></textarea>
+
+      <button class="btn" type="submit">Enviar Encuesta</button>
+      <a href="index.html" class="btn btn-volver">Volver al Inicio</a>
+
+    </form>
+  </div>
+
+</body>
+</html>

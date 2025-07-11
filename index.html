@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CINE DARDOS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #3a4362;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(rgb(56, 243, 177), rgb(93, 56, 160));
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .contenedor {
+      max-width: 1300px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin: 40px 0 20px;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+  background: #282932;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  width: 330px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: aparecer 0.6s ease-in-out forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(233, 233, 243, 0.811);
+
+}
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    #boleta {
+      margin-top: 40px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgb(215, 210, 210);
+      display: none;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: aparecer 0.5s ease-in-out forwards;
+    }
+
+    #boleta img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    #boleta ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .btn-encuesta {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #e50914;
+      color: rgb(240, 222, 222);
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @keyframes aparecer {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CINE DARDOS</h1>
+  </header>
+
+  <div class="contenedor">
+    <h2 class="section-title">Películas</h2>
+    <div class="grid" id="peliculas">
+      <div class="card" onclick="seleccionarPelicula('Superman', 20, 'https://ca-times.brightspotcdn.com/dims4/default/da1ea9f/2147483647/strip/true/crop/695x1000+0+0/resize/1200x1727!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6d%2Fad%2Fcc33c82247a7978defa3eddb943b%2Fet-spiderman-across-the-spiderverse-2023-005.JPG')">
+        <img src="https://ca-times.brightspotcdn.com/dims4/default/da1ea9f/2147483647/strip/true/crop/695x1000+0+0/resize/1200x1727!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6d%2Fad%2Fcc33c82247a7978defa3eddb943b%2Fet-spiderman-across-the-spiderverse-2023-005.JPG">
+        <h3>Superman</h3>
+        <p>James Gunn asume el papel del superhéroe original con acción, humor y corazón.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('Minecraft', 18, 'https://lh4.googleusercontent.com/proxy/TaDD2E7SoMMw4FhpzUUyNr3Ytw0_jiMaCP513hlqQnSnvpjyDSSqYd4MQRYcJogJOEVu15lGM90a1eermPLnnIyo8E9C80ADlz_-hlZA0oIOp2myZA')">
+        <img src="https://lh4.googleusercontent.com/proxy/TaDD2E7SoMMw4FhpzUUyNr3Ytw0_jiMaCP513hlqQnSnvpjyDSSqYd4MQRYcJogJOEVu15lGM90a1eermPLnnIyo8E9C80ADlz_-hlZA0oIOp2myZA">
+        <h3>Minecraft</h3>
+        <p>Aventura para toda la familia ambientada en el mundo cúbico más famoso.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('Sueños de fuga', 22, 'https://m.media-amazon.com/images/I/71rdo-aARVL._UF894,1000_QL80_.jpg')">
+        <img src="https://m.media-amazon.com/images/I/71rdo-aARVL._UF894,1000_QL80_.jpg">
+        <h3>Sueños de fuga</h3>
+        <p>Drama emocional profundo y conmovedor sobre comvictos dentro de una prison.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('Blade runner', 21, 'https://es.web.img3.acsta.net/pictures/18/03/16/15/33/3988420.jpg')">
+        <img src="https://es.web.img3.acsta.net/pictures/18/03/16/15/33/3988420.jpg">
+        <h3>Blade runner</h3>
+        <p>Ciencia ficción futurista llena de suspenso y accion en un mundo futurista neo noar.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('Pelicula 5', 19, 'https://m.media-amazon.com/images/M/MV5BYmFmZjM1ZTEtYzQ5ZS00MTRmLTkzMDktYWMxNTg2NGE3YjY4XkEyXkFqcGc@._V1_.jpg')">
+        <img src="https://m.media-amazon.com/images/M/MV5BYmFmZjM1ZTEtYzQ5ZS00MTRmLTkzMDktYWMxNTg2NGE3YjY4XkEyXkFqcGc@._V1_.jpg">
+        <h3>El padrino</h3>
+        <p>Un clasico del cine lleno de misterio, suspenso e hisotiras inolvidables.</p>
+      </div>
+      <div class="card" onclick="seleccionarPelicula('Pelicula 6', 23, 'https://i.ebayimg.com/images/g/IEsAAOSwoSBnLYWC/s-l400.jpg')">
+        <img src="https://i.ebayimg.com/images/g/IEsAAOSwoSBnLYWC/s-l400.jpg">
+        <h3>Quantumania</h3>
+        <p>Una pelicula de superheroes ideal para ver con toda la familia.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Productos</h2>
+    <div class="grid" id="productos">
+      <div class="card" onclick="agregarProducto('Popcorn', 10)">
+        <img src="https://media.istockphoto.com/id/1160441778/es/foto/taza-de-papel-con-palomitas-de-ma%C3%ADz-sobre-blanco.jpg?s=612x612&w=0&k=20&c=RMMT0FQu1vJGrjwoLMxP4-j6WzFayJVx4I7GM-kqfOM=">
+        <h3>Canchita</h3>
+        <p>Cancha con mantequilla indispensable para cualquier peli.</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Bebida', 8)">
+        <img src="https://reysolperu.com/wp-content/uploads/2024/03/gaseosas.jpg">
+        <h3>Bebida</h3>
+        <p>Refresco frío para mantenerte hidratado.</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Nachos', 12)">
+        <img src="https://www.kindpng.com/picc/m/132-1322497_nachos-cinepolis-png-download-nachos-con-queso-cinepolis.png">
+        <h3>Nachos</h3>
+        <p>Con queso derretido. Perfectos para compartir.</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Chocolate', 6)">
+        <img src="https://churchill36.com/wp-content/uploads/2023/04/snkckers-venezuela.jpg">
+        <h3>Chocolate</h3>
+        <p>Dulce clásico para endulzar la función.</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Hot Dog', 9)">
+        <img src="https://recipe-graphics.grocerywebsite.com/0_GraphicsRecipes/1994_4k.jpg">
+        <h3>Hot Dog</h3>
+        <p>Con mostaza y ketchup, ideal para intermedios.</p>
+      </div>
+      <div class="card" onclick="agregarProducto('Helado', 7)">
+        <img src="https://img.freepik.com/foto-gratis/delicioso-helado-estudio_23-2150696544.jpg">
+        <h3>Helado</h3>
+        <p>De vainilla o fresa. Recargable con cuota.</p>
+      </div>
+    </div>
+
+    <div id="boleta">
+      <h2>Tu Boleta</h2>
+      <div id="resumenPelicula"></div>
+      <ul id="resumenProductos"></ul>
+      <h3 id="totalDisplay"></h3>
+    </div>
+
+    <a class="btn-encuesta" href="encuesta.html">Comprar e ir a la Encuesta</a>
+  </div>
+
+  <script>
+    let peliculaSeleccionada = null;
+    let productosSeleccionados = [];
+
+    function seleccionarPelicula(nombre, precio, imagen) {
+      peliculaSeleccionada = { nombre, precio, imagen };
+      mostrarBoleta();
+    }
+
+    function agregarProducto(nombre, precio) {
+      productosSeleccionados.push({ nombre, precio });
+      mostrarBoleta();
+    }
+
+    function mostrarBoleta() {
+      if (!peliculaSeleccionada) return;
+
+      document.getElementById("boleta").style.display = "block";
+
+      const resumenPelicula = document.getElementById("resumenPelicula");
+      resumenPelicula.innerHTML = `
+        <h3>${peliculaSeleccionada.nombre}</h3>
+        <img src="${peliculaSeleccionada.imagen}" alt="${peliculaSeleccionada.nombre}">
+        <p>Precio: S/ ${peliculaSeleccionada.precio}</p>
+      `;
+
+      const resumenProductos = document.getElementById("resumenProductos");
+      resumenProductos.innerHTML = productosSeleccionados.map(p =>
+        `<li>${p.nombre} - S/ ${p.precio}</li>`).join("");
+
+      const total = peliculaSeleccionada.precio + productosSeleccionados.reduce((sum, p) => sum + p.precio, 0);
+      const totalDisplay = document.getElementById("totalDisplay");
+      totalDisplay.textContent = `Total: S/ ${total}`;
+    }
+  </script>
+</body>
+</html>
